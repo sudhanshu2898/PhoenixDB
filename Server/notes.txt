@@ -1,0 +1,38 @@
+1. auth.txt will store all user-password-database relation in MD5 hash
+2. Tables are class and row are object. (Schema free database)
+3. Query Will be in json format. and client will have predefined functions to work with just like mongoDB.
+4. Make a key-value pair based database
+Run Command:
+g++ main.cpp -l wsock32 -o server
+
+Auth Query:
+{"username":"sudhanshu", "password":"s@1998", "database":"college"}
+
+Sample Query to add:
+{
+    "operation":"add",
+    "collection": "college",
+    "data": {"name": "Sudhanshu", "surname": "Jha", "age": 24, "city": "Indore"}
+}
+
+Sample Query to find:
+{
+    "operation":"find",
+    "collection": "college",
+    "filter":{"name":"sudhanshu"}
+}
+
+Sample Query to delete:
+{
+    "operation":"delete",
+    "collection": "college",
+    "filter":{"name":"sudhanshu"}
+}
+
+Sample Query to update:
+{
+    "operation":"update",
+    "collection": "college",
+    "data": {"name": "Nimit", "surname": "Pathak", "age": 24, "city": "Indore"},
+    "filter":{"name":"sudhanshu"}
+}

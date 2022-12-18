@@ -1,0 +1,6 @@
+{
+    "name":"PhoenixDB",
+    "version":"0.0.1",
+    "port":9999,
+    "maxQueryLength":1048576
+}
